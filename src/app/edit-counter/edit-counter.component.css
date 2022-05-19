@@ -1,0 +1,50 @@
+
+
+.container-btn, .btns{
+    margin-top: 20px;
+   
+
+    
+}
+input{
+    width: 300px;
+}
+input[type="text"]{
+    font-size: 21px!important;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+.increase{
+    background-color: rgb(50, 176, 134);
+    border: 1px solid rgb(12, 129, 23);
+    font-weight: bold;
+    padding: .4rem;
+    cursor: pointer;
+
+}
+
+.deacrease{
+    background-color: rgb(208, 168, 25);
+    border: 1px solid rgb(230, 215, 8);
+    font-weight: bold;
+    padding: .4rem;
+    cursor: pointer;
+}
+
+.increase:hover{
+      background-color: rgb(19, 138, 99);
+}
+
+.deacrease:hover{
+       background-color: rgb(145, 115, 8);
+}
+
+input:focus{
+    outline: 1px solid rgb(59, 230, 190);
+}
