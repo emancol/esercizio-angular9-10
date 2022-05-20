@@ -10,7 +10,7 @@ export class EditCounterComponent implements OnInit {
 
 
 
-  constructor(private counter: CounterService,) {
+  constructor(private counterService: CounterService,) {
 
 
 
@@ -23,12 +23,12 @@ export class EditCounterComponent implements OnInit {
   }
 
   add(data: any): void {
-    (!data.value) ? this.counter.increase() : this.counter.increase(+data.value)
+    (!data.value) ? this.counterService.increase() : this.counterService.increase(+data.value)
     data.value = '';
   }
 
   subtrac(data: any): void {
-    (!data.value) ? this.counter.decrease() : this.counter.decrease(+data.value)
+    (!data.value) ? this.counterService.decrease() : this.counterService.decrease(+data.value)
     data.value = '';
   }
 }

@@ -8,22 +8,21 @@ import { CounterService } from '../services/counter.service';
 })
 export class ShowCounterComponent implements OnInit {
 
-  num: number;
+  counter!: number;
   error!: boolean;
 
-  constructor(private counter: CounterService) {
-
-    this.num = this.counter.getValueCounter()
-    setInterval(() => {
-      this.num = this.counter.getValueCounter()
-      this.error = this.counter.showError;
-    })
+  constructor(private counterService: CounterService) {
 
   }
 
 
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.counterService.getValueCounter().subscribe((data: number) => {
+      this.counter = data;
+      this.error = this.counterService.showError;
+    })
+  }
 
 
 }
