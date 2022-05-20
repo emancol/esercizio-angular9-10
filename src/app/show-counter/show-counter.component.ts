@@ -16,7 +16,6 @@ export class ShowCounterComponent implements OnInit {
   }
 
 
-
   ngOnInit(): void {
     this.counterService.getValueCounter().subscribe((data: number) => {
       this.counter = data;
