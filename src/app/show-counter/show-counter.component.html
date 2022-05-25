@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="counter-container">
+        <h1>COUNTER</h1>
+        <h1 class="number">{{counter}}</h1>
+        <div class="container-btn">
+           <app-edit-counter></app-edit-counter>
+        </div>
+        <ng-container *ngIf="error">
+             <h1 class="error">You can't go under zero</h1>
+        </ng-container>
+    </div>
+</div>
